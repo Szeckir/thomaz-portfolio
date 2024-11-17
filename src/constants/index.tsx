@@ -7,6 +7,10 @@ import { color } from 'framer-motion'
 
 import boogiesProject from '../assets/pBoogies.jpg'
 import pBuscaCep from '../assets/pBuscaCep.jpeg'
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import CodeIcon from '@mui/icons-material/Code';
+import TerminalIcon from '@mui/icons-material/Terminal';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 
 export const menuOptions = [
     "about", "projects", "contact"
@@ -17,6 +21,38 @@ export const photosHero = {
     photo2: photo2,
     photo3: photo3,
     photo4: photo4
+}
+
+export const experiences = {
+    1: {
+        position: "Content Creator",
+        date: "Jul 2024 - Present",
+        company: "Youtube",
+        description: "Creator of programming and lifestyle content. Currently +5000 subscribers on the channel.",
+        icon: <YouTubeIcon style={{color: "#FF0034"}}></YouTubeIcon>
+    },
+    2: {
+        position: "Front-End Developer",
+        date: "Apr 2024 - Jun 2024",
+        company: "Orpen",
+        description: "I moved to the Front-End, where I was able to develop a page completely from scratch and solve problems that included HTML, CSS and mainly JavaScript.",
+        icon: <CodeIcon style={{color: '#028901'}}></CodeIcon>
+    },
+    3: {
+        position: "Developer Internship",
+        date: "Jul 2023 - May 2024",
+        company: "Orpen",
+        description: " I worked in the support and development area, using Zabbix to manage dashboards and monitor systems in real time. Docker to manage data and create isolated development environments. SQL for data analysis, while PM2 allowed me to manage Node.js applications. With daily use, I had a lot of contact with Linux, WSL and Git.",
+        icon: <TerminalIcon></TerminalIcon>
+    
+    },
+    4: {
+        position: "Treasurer",
+        date: "Feb 2021 - Dec 2021",
+        company: "Colégio Marista Ipanema",
+        description: "Treasurer for the management of the College's Student Union.",
+        icon: <MonetizationOnIcon style={{color: "#E79610"}}></MonetizationOnIcon>
+    }
 }
 
 export const programmingLanguages_ = {
@@ -77,3 +113,4 @@ export const projects = {
         link: 'https://github.com/Szeckir/Boogies-barbershop'
     },
 }
+
