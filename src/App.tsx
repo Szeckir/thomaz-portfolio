@@ -1,5 +1,6 @@
 import { Button } from "./components/ui/button"
 import HyperText from "./components/ui/hyper-text"
+import Experiences from "./components/ux/Experiences"
 import Hero from "./components/ux/Hero"
 import Navbar from "./components/ux/Navbar"
 import Projects from "./components/ux/Projects"
@@ -11,6 +12,7 @@ function App() {
       <div className="bg-gradient-to-b from-black to-neutral-800">
         <Hero />
         <Projects />
+        <Experiences />
       </div>
     </div>
   )

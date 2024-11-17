@@ -25,6 +25,7 @@ function CardProject({ title, languages, date, description, link}) {
                     </a>
                   </ul>
                 </p>
+                
             </div>
         </div>
       </Fade>
