@@ -76,7 +76,22 @@ export const programmingLanguages_ = {
         class: <i class="devicon-cplusplus-plain"></i>,
         color: '#00427E'
     },
-    typescript: <i class="devicon-typescript-plain"></i>,
+    typescript: {
+        class: <i class="devicon-typescript-plain"></i>,
+        color: ''
+    },
+    html: {
+        class: <i class="devicon-html5-plain"></i>,
+        color: '#E54D26'
+    },
+    css: {
+        class: <i class="devicon-css3-plain"></i>,
+        color: '#3C8FC6'
+    },
+    javascript: {
+        class: <i class="devicon-javascript-plain"></i>,
+        color: '#EFDB4F'
+    }
 }
 
 export const projects = {
@@ -93,24 +108,25 @@ export const projects = {
     },
     project2: {
         title: "Busca por CEP",
-        description: "Página de verificação de CEP com integração API,",
+        description: "Página de verificação de CEP com integração API.",
         date: "April 2024",
         firstText: "Realizei uma pequena página de verificação de CEP com integração API, onde, se o CEP existir, irá trazer todas as informações necessárias à respeito da região. Para realização da simples página, utilizei conhecimentos de JS para integrar com a API, CSS para estilizar a página e o HTML para fazer o layout da página.",
         languages: [
-            programmingLanguages_.cpp, programmingLanguages_.java
+            programmingLanguages_.html, programmingLanguages_.css, programmingLanguages_.javascript
         ],
-        link: 'https://github.com/Szeckir/Boogies-barbershop',
+        link: 'https://github.com/Szeckir/Busca-pelo-CEP',
         image: pBuscaCep
     },
     project3: {
-        title: "Project 3",
-        description: "This is a project description",
-        date: "2021",
-        firstText: "very big 3 - ",
+        title: "Venda de Passagem Aérea",
+        description: "",
+        date: "Nov 2023",
+        firstText: "Trabalho final de Programação Orienta a Objetos, onde o intuito era fazer todo sistema de um aeroporto. A ideia era programar o sistema de aviões, compra/ venda de passagens, e muito mais.",
         languages: [
-            programmingLanguages_.react, programmingLanguages_.tailwind
+            programmingLanguages_.java
         ],
-        link: 'https://github.com/Szeckir/Boogies-barbershop'
+        link: 'https://github.com/Szeckir/VendaPassagemAerea'
     },
+    
 }
 

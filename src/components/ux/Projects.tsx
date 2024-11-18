@@ -35,7 +35,7 @@ function Projects() {
                 <h3 className="text-xl mt-4">Click to learn more</h3>
             </Fade>
             <div className="mt-10">
-                <ul className="flex items-center justify-center gap-4">
+                <ul className="flex items-center justify-center gap-4 flex-wrap">
                     {
                         Object.values(projects).map((element, index) => (
                             <li key={index} className="cursor-pointer max-w-96 w-96" onClick={() => handleOpen(element)}>
@@ -98,9 +98,9 @@ function Projects() {
                                                     ))
                                                     }
                                                 </ul>
-                                                <button style={{backgroundColor: programmingLanguages_.github.color}} className="text-white p-2 rounded-md items-center">
+                                                <a style={{backgroundColor: programmingLanguages_.github.color}} className="text-white p-2 rounded-md items-center" href={selectedProject.link} target="_blank">
                                                     {programmingLanguages_.github.class} GitHub Repository <ArrowOutwardIcon />
-                                                </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </Box>

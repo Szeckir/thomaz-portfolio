@@ -1,5 +1,6 @@
 import { Button } from "./components/ui/button"
 import HyperText from "./components/ui/hyper-text"
+import Contact from "./components/ux/Contact"
 import Experiences from "./components/ux/Experiences"
 import Hero from "./components/ux/Hero"
 import Navbar from "./components/ux/Navbar"
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <Projects />
         <Experiences />
+        <Contact />
       </div>
     </div>
   )
