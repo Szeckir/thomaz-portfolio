@@ -11,6 +11,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import CodeIcon from '@mui/icons-material/Code';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import LanguageIcon from '@mui/icons-material/Language';
 
 export const menuOptions = [
     "about", "projects", "contact"
@@ -104,7 +105,8 @@ export const projects = {
             programmingLanguages_.react, programmingLanguages_.tailwind
         ],
         link: 'https://github.com/Szeckir/Boogies-barbershop',
-        image: boogiesProject
+        image: boogiesProject,
+        website: 'https://boogies-barbershop.vercel.app/'
     },
     project2: {
         title: "Busca por CEP",

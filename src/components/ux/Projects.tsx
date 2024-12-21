@@ -12,6 +12,7 @@ import { Slide } from "react-awesome-reveal";
 import boogiesProject from '../../assets/pBoogies.jpg'
 import { programmingLanguages_ } from "../../constants"
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import LanguageIcon from '@mui/icons-material/Language';
 
 function Projects() {
     const [open, setOpen] = useState(false);
@@ -98,9 +99,17 @@ function Projects() {
                                                     ))
                                                     }
                                                 </ul>
-                                                <a style={{backgroundColor: programmingLanguages_.github.color}} className="text-white p-2 rounded-md items-center" href={selectedProject.link} target="_blank">
-                                                    {programmingLanguages_.github.class} GitHub Repository <ArrowOutwardIcon />
-                                                </a>
+                                                <div className="mt-4 flex gap-2">
+                                                    <a style={{backgroundColor: programmingLanguages_.github.color}} className="text-white p-2 rounded-md items-center" href={selectedProject.link} target="_blank">
+                                                        {programmingLanguages_.github.class} GitHub Repository <ArrowOutwardIcon />
+                                                    </a>
+                                                    {
+                                                        selectedProject.website && 
+                                                        <a style={{backgroundColor: programmingLanguages_.github.color}} className="text-white p-2 rounded-md items-center" href={selectedProject.website} target="_blank">
+                                                            <LanguageIcon></LanguageIcon> Website   
+                                                        </a>
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
                                     </Box>

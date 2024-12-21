@@ -6,21 +6,34 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import Typography from '@mui/material/Typography';
+import { Fade, Zoom } from "react-awesome-reveal"
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import CloseIcon from '@mui/icons-material/Close';
+import { useState } from "react";
+import { log } from "console";
 
 function experienceItem({ professionalExperience }) {
+    const [open, setOpen] = useState(false);
+  
+      const handleOpen = () => {
+          setOpen(true);
+      };
+  
+      const handleClose = () => {
+        console.log('trying close');
+        setOpen(false);
+      };
+
     return (
-        <TimelineItem onClick={() => console.log('abrir modal')} className="hover:cursor-pointer">
-            
+        <TimelineItem onClick={() => handleOpen()} className="hover:cursor-pointer">
             <TimelineOppositeContent className="text-gray-400 font-bold"
                 sx={{ m: 'auto 0' }}
                 align="right"
                 variant="body2"
             >
-                {professionalExperience.date}
+                {professionalExperience.position}
             </TimelineOppositeContent>
 
             <TimelineSeparator>
@@ -38,13 +51,38 @@ function experienceItem({ professionalExperience }) {
                     {professionalExperience.position}
                 </Typography>
                 <Typography className="text-gray-300">
-
                     {professionalExperience.description}
-
                 </Typography>
             </TimelineContent>
+
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                className="text-center items-center justify-center flex"
+            >
+                <Zoom>
+                    <Box borderColor={"white"} padding={3} bgcolor={"white"} borderRadius={4}>
+                        <div className="max-w-4xl items-start text-start">
+                            <div className="flex justify-between">
+                                <Typography className="text-black font-bold" fontSize={24} fontWeight={600}>
+                                    {professionalExperience.position}
+                                </Typography>
+                                <CloseIcon onClick={handleClose} className="hover:cursor-pointer hover:bg-gray-100 rounded-md"></CloseIcon>
+                            </div>
+
+                            <div>
+                                <Typography>
+                                    teste
+                                </Typography>
+                            </div>
+                        </div>
+                    </Box>
+                </Zoom>
+            </Modal>
         </TimelineItem>
-        
+
     )
 }
 
